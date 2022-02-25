@@ -47,6 +47,8 @@ fi
 ### standalone mode only from here on
 ###
 
+VIRTUALIZE_ROOT=$VIRTUALIZE_HOMEBREW_DIR  # prevents autoactivating
+
 function unactivate() {
     local virtualize_homebrew_dir="$VIRTUALIZE_HOMEBREW_DIR"
     unactivate_homebrew
@@ -55,8 +57,9 @@ function unactivate() {
     unset VIRTUALIZE_HOMEBREW_ORIG_PS1
     unset VIRTUALIZE_HOMEBREW_ACTIVE_VERSION
     unset VIRTUALIZE_HOMEBREW_DISPLAY
+    unset VIRTUALIZE_ROOT
     unset -f unactivate
-    echo "unactivated $virtualize_root"
+    echo "unactivated $virtualize_homebrew_dir"
 }
 
 VIRTUALIZE_HOMEBREW_ORIG_PS1="$PS1"
