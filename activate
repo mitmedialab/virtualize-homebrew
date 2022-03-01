@@ -58,7 +58,7 @@ function unactivate() {
 
 VIRTUALIZE_HOMEBREW_ORIG_PS1="$PS1"
 VIRTUALIZE_HOMEBREW_ACTIVE_VERSION=`$VIRTUALIZE_HOMEBREW_DIR/homebrew/bin/brew --version | head -1 | cut -d" " -f2`
-VIRTUALIZE_HOMEBREW_DISPLAY="`echo $VIRTUALIZE_HOMEBREW_DIR | sed \"s%^$HOME/%%" | sed 's/\//·/g'`"
+VIRTUALIZE_HOMEBREW_DISPLAY="`echo $VIRTUALIZE_HOMEBREW_DIR | sed \"s%^$HOME/%%" | sed 's/\//·/g'` $VIRTUALIZE_HOMEBREW_ACTIVE_VERSION"
 if [[ $ZSH_VERSION ]]; then
    PS1="[$VIRTUALIZE_HOMEBREW_DISPLAY]$PS1"
 else  # for bash (and others?)
