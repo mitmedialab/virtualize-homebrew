@@ -4,5 +4,4 @@
 /*.log
 .env
 .env.*
-brew/
 homebrew/
