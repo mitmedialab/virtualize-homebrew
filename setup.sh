@@ -13,12 +13,8 @@ cd homebrew
 bin/brew config
 bin/brew update-reset
 bin/brew update
-bin/brew install the_silver_searcher
+bin/brew install curl  # some packages need this to install from source
 
 echo "homebrew installed"
 
 exit
-
-
-## Notes:
-## maybe we should have a list of brew packages that need to be installed for a given project?
