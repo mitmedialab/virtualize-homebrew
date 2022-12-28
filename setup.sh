@@ -13,7 +13,7 @@ cd homebrew
 bin/brew config
 bin/brew update-reset
 bin/brew update
-bin/brew install curl  # some packages need this to install from source
+#bin/brew install curl  # some packages need this to install from source
 
 echo "homebrew installed"
 
